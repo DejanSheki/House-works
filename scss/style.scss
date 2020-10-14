@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
 $primary: #313131;
 $secondary: #fde21c;
 $tertiary: #506df5;
@@ -66,6 +66,7 @@ body {
     font-size: $fontSize;
     font-family: $fontFamily;
     color: $black;
+    background: #f7f7f7;
 }
 
 .container {
@@ -233,6 +234,246 @@ nav {
                 color: $white;
                 border: 2px solid $tertiary;
             }
+        }
+    }
+}
+
+
+/****advantages***/
+
+.advantages {
+    background-image: linear-gradient(rgba($black, .5), rgba($black, .5)), url(../img/bg3.jpg);
+    @include img(85vh);
+    padding: $padding;
+    h2 {
+        font-size: 5rem;
+        font-weight: 600;
+        text-align: center;
+        color: $white;
+    }
+    hr {
+        background: $secondary;
+        width: 150px;
+        height: 4px;
+        border: none;
+        margin: 0 auto 50px auto;
+    }
+    .container {
+        @include flex(space-between,
+        center,
+        row,
+        wrap);
+        article {
+            flex: 0 0 30%;
+            background: $white;
+            border-radius: 10px;
+            border: 1px solid $lightgray;
+            img {
+                width: 100%;
+                border-radius: 10px 10px 0 0;
+            }
+            .text {
+                padding: 30px;
+                h3 {
+                    font-weight: 500;
+                    font-size: 1.4rem;
+                }
+                p {
+                    color: $text;
+                    padding: 20px 0;
+                    font-size: .8rem;
+                }
+                button {
+                    @include btn(transparent,
+                    2px solid $tertiary,
+                    $tertiary,
+                    transparent);
+                    &:hover {
+                        background: $tertiary;
+                        color: $white;
+                        border: 2px solid $tertiary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/***team***/
+
+.team {
+    padding: $padding;
+    h2 {
+        font-size: 5.2rem;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .container {
+        @include flex(space-between,
+        center,
+        row,
+        wrap);
+        article {
+            flex: 0 0 48%;
+            @include flex(space-between,
+            stretch,
+            row,
+            wrap);
+            margin-bottom: 50px;
+            box-shadow: 0 0 30px $lightgray;
+            &:hover {
+                box-shadow: 0 0 40px darken($lightgray, 10);
+            }
+            div:first-child {
+                flex: 0 0 50%;
+                background: $white;
+                padding: 30px;
+                h4 {
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    margin-bottom: 5px;
+                }
+                h5 {
+                    font-weight: 300;
+                    font-size: 1.1rem;
+                    ;
+                }
+                p {
+                    font-size: .8rem;
+                    padding: 15px 0;
+                }
+                i {
+                    color: $orange;
+                    font-size: 1.3rem;
+                }
+            }
+            div:last-child {
+                flex: 0 0 50%;
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+
+/***services***/
+
+.services {
+    background-image: linear-gradient(rgba($black, .7), rgba($black, .7)), url(../img/bg2.jpg);
+    @include img(auto);
+    background-size: revert;
+    padding: 100px 0;
+    color: $white;
+    .container {
+        @include flex(space-between,
+        center,
+        row,
+        wrap);
+        article {
+            flex: 0 0 49%;
+        }
+        article:first-child {
+            border: 1px solid $lightgray;
+            padding: 50px;
+            text-align: center;
+            h2 {
+                margin-top: 30px;
+                font-size: 2.5rem;
+                font-weight: 400;
+            }
+            p {
+                padding: 30px;
+            }
+            i {
+                font-size: 6rem;
+                color: $secondary;
+            }
+            button {
+                @include btn(transparent,
+                2px solid $white,
+                $white,
+                none);
+            }
+        }
+        article:last-child {
+            @include flex(space-between,
+            center,
+            column,
+            wrap);
+            div {
+                padding: 50px;
+            }
+        }
+    }
+}
+
+
+/***work***/
+
+.work {
+    @include flex(space-between,
+    flex-start,
+    row,
+    wrap);
+    padding: $padding;
+    article {
+        flex: 0 0 32%;
+        line-height: 1.6;
+        font-size: .8;
+        font-weight: 400;
+    }
+    article:first-child {
+        align-self: center;
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            line-height: 50px;
+        }
+    }
+}
+
+
+/***cta***/
+
+.cta {
+    padding: $padding;
+    @include flex(center,
+    center,
+    row,
+    wrap);
+    background: $primary;
+    button:nth-child(1) {
+        @include btn($secondary,
+        2px solid $secondary,
+        $primary,
+        none);
+        &:hover {
+            background: transparent;
+            color: $secondary;
+            border: 2px solid $secondary;
+        }
+    }
+    button:nth-child(2) {
+        @include btn(transparent,
+        2px solid $white,
+        $white,
+        none);
+        margin: 0 10px;
+    }
+    button:nth-child(3) {
+        @include btn($tertiary,
+        2px solid $tertiary,
+        $white,
+        none);
+        &:hover {
+            background: transparent;
+            color: $tertiary;
+            border: 2px solid $tertiary;
         }
     }
 }
