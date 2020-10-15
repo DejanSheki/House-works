@@ -602,7 +602,7 @@ footer {
     row,
     wrap);
     @media (max-width: 768px) {
-        @include flex(center, center, column, wrap);
+        @include flex(center, flex-start, column, wrap);
         padding: 15px;
     }
     article {
@@ -615,7 +615,7 @@ footer {
             wrap);
             padding-right: 30px;
             @media (max-width: 768px) {
-                @include flex(flex-start, stretch, column, wrap);
+                @include flex(flex-start, flex-start, unset, wrap);
                 padding: 15px;
             }
             input {
@@ -623,12 +623,18 @@ footer {
                 margin-bottom: 30px;
                 border: 1px dotted $primary;
                 background: #f7f7f7;
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
             }
             textarea {
                 padding: 20px;
                 margin-bottom: 30px;
                 border: 1px dotted $primary;
                 background: #f7f7f7;
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
             }
             button {
                 @include btn($secondary,
@@ -639,7 +645,7 @@ footer {
                 margin: auto;
                 display: block;
                 @media (max-width: 768px) {
-                    width: 70%;
+                    width: 40%;
                 }
                 &:hover {
                     background: transparent;
@@ -651,6 +657,9 @@ footer {
         }
         img {
             width: 30%;
+            @media (max-width: 768px) {
+                width: 20%;
+            }
         }
         ul {
             li {
@@ -685,6 +694,9 @@ footer {
         i {
             color: $darkblue;
             margin-right: 10px;
+        }
+        @media (max-width: 768px) {
+            margin-top: 30px;
         }
     }
 }
