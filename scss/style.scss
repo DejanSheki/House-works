@@ -451,7 +451,7 @@ nav {
         @include btn($secondary,
         2px solid $secondary,
         $primary,
-        none);
+        uppercase);
         &:hover {
             background: transparent;
             color: $secondary;
@@ -462,14 +462,14 @@ nav {
         @include btn(transparent,
         2px solid $white,
         $white,
-        none);
+        uppercase);
         margin: 0 10px;
     }
     button:nth-child(3) {
         @include btn($tertiary,
         2px solid $tertiary,
         $white,
-        none);
+        uppercase);
         &:hover {
             background: transparent;
             color: $tertiary;
@@ -480,3 +480,97 @@ nav {
 
 
 /***footer***/
+
+footer {
+    padding: $padding;
+    @include flex(flex-start,
+    flex-start,
+    row,
+    wrap);
+    article {
+        flex: 1;
+        line-height: 1.7;
+        form {
+            @include flex(center,
+            stretch,
+            column,
+            wrap);
+            padding-right: 30px;
+            input {
+                padding: 20px;
+                margin-bottom: 30px;
+                border: 1px dotted $primary;
+                background: #f7f7f7;
+            }
+            textarea {
+                padding: 20px;
+                margin-bottom: 30px;
+                border: 1px dotted $primary;
+                background: #f7f7f7;
+            }
+            button {
+                @include btn($secondary,
+                2px solid $secondary,
+                $primary,
+                none);
+                width: 60%;
+                margin: auto;
+                display: block;
+                &:hover {
+                    background: transparent;
+                    color: $primary;
+                    border: 2px solid $secondary;
+                    transition: $transition;
+                }
+            }
+        }
+        img {
+            width: 30%;
+        }
+        ul {
+            li {
+                list-style: none;
+                margin-bottom: 10px;
+            }
+            li::before {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                content: "\f0c8";
+                font-size: .6rem;
+                color: $darkblue;
+                margin-right: 20px;
+            }
+        }
+        h4 {
+            margin-bottom: 20px;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        .adress {
+            margin-top: 20px;
+        }
+    }
+    article:last-child {
+        p {
+            margin-bottom: 10px;
+        }
+        p:nth-child(2) {
+            font-size: .8rem;
+        }
+        i {
+            color: $darkblue;
+            margin-right: 10px;
+        }
+    }
+}
+
+
+/***bottomBar***/
+
+.bottomBar {
+    padding: 50px 0;
+    background: $primary;
+    text-align: center;
+    color: $white;
+    font-size: 1.3rem;
+}

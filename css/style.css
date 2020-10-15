@@ -1,10 +1,10 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap");
 /*****mixins*****/
 /****basic styles*****/
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -25,48 +25,23 @@ nav {
   background: #313131;
   color: #fff;
   padding: 10px 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-
 nav div:nth-child(1) {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-
 nav div:nth-child(1) img {
   width: 80px;
 }
-
 nav div:nth-child(1) a {
   color: #fff;
   text-decoration: none;
@@ -74,58 +49,30 @@ nav div:nth-child(1) a {
   margin-left: 20px;
   font-size: 1.3rem;
 }
-
 nav div:nth-child(1) a:hover {
   color: #d3d3d3;
 }
-
 nav div:nth-child(2) {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-
 nav div:nth-child(2) p {
   font-size: 0.8rem;
   font-weight: 600;
   text-align: center;
 }
-
 nav div:nth-child(3) {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-
 nav div:nth-child(3) button {
   padding: 15px 30px;
   background: transparent;
@@ -135,68 +82,41 @@ nav div:nth-child(3) button {
   font-size: 1rem;
   border-radius: 3px;
 }
-
 nav div:nth-child(3) button:hover {
   cursor: pointer;
   background: #fff;
   border: 2px solid #fff;
   color: #313131;
-  -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
 
 /***mainHeader*****/
 .mainHeader {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/header.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/header.jpg);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   height: 80vh;
   background-position: center;
   background-size: cover;
   color: #fff;
 }
-
 .mainHeader h1 {
   font-size: 3rem;
 }
-
 .mainHeader p {
   text-align: center;
   padding: 30px 0;
 }
-
 .mainHeader div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-
 .mainHeader div button:nth-child(1) {
   padding: 15px 30px;
   background: #506df5;
@@ -207,22 +127,18 @@ nav div:nth-child(3) button:hover {
   border-radius: 3px;
   margin-right: 10px;
 }
-
 .mainHeader div button:nth-child(1):hover {
   cursor: pointer;
   background: #fff;
   border: 2px solid #fff;
   color: #313131;
-  -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
-
 .mainHeader div button:nth-child(1):hover {
   background: transparent;
   color: #506df5;
   border: 2px solid #506df5;
 }
-
 .mainHeader div button:nth-child(2) {
   padding: 15px 30px;
   background: transparent;
@@ -233,76 +149,53 @@ nav div:nth-child(3) button:hover {
   border-radius: 3px;
   margin-left: 10px;
 }
-
 .mainHeader div button:nth-child(2):hover {
   cursor: pointer;
   background: #fff;
   border: 2px solid #fff;
   color: #313131;
-  -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
 
 /***pricing***/
 .pricing {
   padding: 4rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-
 .pricing article {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
   text-align: center;
   border: 1px solid #d3d3d3;
   padding: 2rem;
 }
-
 .pricing article:hover {
-  -webkit-transform: scale(1.1);
   transform: scale(1.1);
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   background: #fff;
 }
-
 .pricing article h2 {
   font-size: 2.4rem;
   font-weight: 300;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
-
 .pricing article span:nth-child(2) {
   color: #012f5b;
   font-size: 2.4rem;
 }
-
 .pricing article span:nth-child(3) {
   color: #012f5b;
   font-size: 5rem;
   font-weight: 300;
 }
-
 .pricing article span:nth-child(4) {
   color: #585858;
   font-size: 1.2rem;
 }
-
 .pricing article p {
   color: #585858;
   padding: 10px 0;
@@ -311,7 +204,6 @@ nav div:nth-child(3) button:hover {
   margin-bottom: 15px;
   line-height: 1.5;
 }
-
 .pricing article button {
   padding: 15px 30px;
   background: transparent;
@@ -322,16 +214,13 @@ nav div:nth-child(3) button:hover {
   border-radius: 3px;
   margin: 0.4rem 0.5rem;
 }
-
 .pricing article button:hover {
   cursor: pointer;
   background: #fff;
   border: 2px solid #fff;
   color: #313131;
-  -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
-
 .pricing article button:hover {
   background: #506df5;
   color: #fff;
@@ -340,21 +229,18 @@ nav div:nth-child(3) button:hover {
 
 /****advantages***/
 .advantages {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/bg3.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg3.jpg);
   height: 85vh;
   background-position: center;
   background-size: cover;
   padding: 4rem 0;
 }
-
 .advantages h2 {
   font-size: 5rem;
   font-weight: 600;
   text-align: center;
   color: #fff;
 }
-
 .advantages hr {
   background: #fde21c;
   width: 150px;
@@ -362,54 +248,35 @@ nav div:nth-child(3) button:hover {
   border: none;
   margin: 0 auto 50px auto;
 }
-
 .advantages .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-
 .advantages .container article {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 30%;
   flex: 0 0 30%;
   background: #fff;
   border-radius: 10px;
   border: 1px solid #d3d3d3;
 }
-
 .advantages .container article img {
   width: 100%;
   border-radius: 10px 10px 0 0;
 }
-
 .advantages .container article .text {
   padding: 30px;
 }
-
 .advantages .container article .text h3 {
   font-weight: 500;
   font-size: 1.4rem;
 }
-
 .advantages .container article .text p {
   color: #585858;
   padding: 20px 0;
   font-size: 0.8rem;
 }
-
 .advantages .container article .text button {
   padding: 15px 30px;
   background: transparent;
@@ -419,16 +286,13 @@ nav div:nth-child(3) button:hover {
   font-size: 1rem;
   border-radius: 3px;
 }
-
 .advantages .container article .text button:hover {
   cursor: pointer;
   background: #fff;
   border: 2px solid #fff;
   color: #313131;
-  -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
-
 .advantages .container article .text button:hover {
   background: #506df5;
   color: #fff;
@@ -439,96 +303,57 @@ nav div:nth-child(3) button:hover {
 .team {
   padding: 4rem 0;
 }
-
 .team h2 {
   font-size: 5.2rem;
   font-weight: 300;
   text-align: center;
   margin-bottom: 40px;
 }
-
 .team .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-
 .team .container article {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 48%;
   flex: 0 0 48%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-bottom: 50px;
-  -webkit-box-shadow: 0 0 30px #d3d3d3;
   box-shadow: 0 0 30px #d3d3d3;
 }
-
 .team .container article:hover {
-  -webkit-box-shadow: 0 0 40px #bababa;
   box-shadow: 0 0 40px #bababa;
 }
-
 .team .container article div:first-child {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
   flex: 0 0 50%;
   background: #fff;
   padding: 30px;
 }
-
 .team .container article div:first-child h4 {
   font-size: 1.3rem;
   font-weight: 500;
   margin-bottom: 5px;
 }
-
 .team .container article div:first-child h5 {
   font-weight: 300;
   font-size: 1.1rem;
 }
-
 .team .container article div:first-child p {
   font-size: 0.8rem;
   padding: 15px 0;
 }
-
 .team .container article div:first-child i {
   color: #fd830f;
   font-size: 1.3rem;
 }
-
 .team .container article div:last-child {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
   flex: 0 0 50%;
 }
-
 .team .container article div:last-child img {
   width: 100%;
   display: block;
@@ -536,7 +361,6 @@ nav div:nth-child(3) button:hover {
 
 /***services***/
 .services {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/bg2.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/bg2.jpg);
   height: auto;
   background-position: center;
@@ -545,52 +369,33 @@ nav div:nth-child(3) button:hover {
   padding: 100px 0;
   color: #fff;
 }
-
 .services .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-
 .services .container article {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 49%;
   flex: 0 0 49%;
 }
-
 .services .container article:first-child {
   border: 1px solid #d3d3d3;
   padding: 50px;
   text-align: center;
 }
-
 .services .container article:first-child h2 {
   margin-top: 30px;
   font-size: 2.5rem;
   font-weight: 400;
 }
-
 .services .container article:first-child p {
   padding: 30px;
 }
-
 .services .container article:first-child i {
   font-size: 6rem;
   color: #fde21c;
 }
-
 .services .container article:first-child button {
   padding: 15px 30px;
   background: transparent;
@@ -600,73 +405,42 @@ nav div:nth-child(3) button:hover {
   font-size: 1rem;
   border-radius: 3px;
 }
-
 .services .container article:first-child button:hover {
   cursor: pointer;
   background: #fff;
   border: 2px solid #fff;
   color: #313131;
-  -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
-
 .services .container article:last-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-
 .services .container article:last-child div {
   padding: 50px;
 }
 
 /***work***/
 .work {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: flex-start;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 4rem 0;
 }
-
 .work article {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 32%;
   flex: 0 0 32%;
   line-height: 1.6;
   font-size: 0.8;
   font-weight: 400;
 }
-
 .work article:first-child {
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
   align-self: center;
 }
-
 .work article:first-child h2 {
   font-size: 2.5rem;
   font-weight: 500;
@@ -676,88 +450,67 @@ nav div:nth-child(3) button:hover {
 /***cta***/
 .cta {
   padding: 4rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   background: #313131;
 }
-
 .cta button:nth-child(1) {
   padding: 15px 30px;
   background: #fde21c;
   border: 2px solid #fde21c;
   color: #313131;
-  text-transform: none;
+  text-transform: uppercase;
   font-size: 1rem;
   border-radius: 3px;
 }
-
 .cta button:nth-child(1):hover {
   cursor: pointer;
   background: #fff;
   border: 2px solid #fff;
   color: #313131;
-  -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
-
 .cta button:nth-child(1):hover {
   background: transparent;
   color: #fde21c;
   border: 2px solid #fde21c;
 }
-
 .cta button:nth-child(2) {
   padding: 15px 30px;
   background: transparent;
   border: 2px solid #fff;
   color: #fff;
-  text-transform: none;
+  text-transform: uppercase;
   font-size: 1rem;
   border-radius: 3px;
   margin: 0 10px;
 }
-
 .cta button:nth-child(2):hover {
   cursor: pointer;
   background: #fff;
   border: 2px solid #fff;
   color: #313131;
-  -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
-
 .cta button:nth-child(3) {
   padding: 15px 30px;
   background: #506df5;
   border: 2px solid #506df5;
   color: #fff;
-  text-transform: none;
+  text-transform: uppercase;
   font-size: 1rem;
   border-radius: 3px;
 }
-
 .cta button:nth-child(3):hover {
   cursor: pointer;
   background: #fff;
   border: 2px solid #fff;
   color: #313131;
-  -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
-
 .cta button:nth-child(3):hover {
   background: transparent;
   color: #506df5;
@@ -765,6 +518,104 @@ nav div:nth-child(3) button:hover {
 }
 
 /***footer***/
-/*# sourceMappingURL=style.css.map */
+footer {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+footer article {
+  flex: 1;
+  line-height: 1.7;
+}
+footer article form {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-right: 30px;
+}
+footer article form input {
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 1px dotted #313131;
+  background: #f7f7f7;
+}
+footer article form textarea {
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 1px dotted #313131;
+  background: #f7f7f7;
+}
+footer article form button {
+  padding: 15px 30px;
+  background: #fde21c;
+  border: 2px solid #fde21c;
+  color: #313131;
+  text-transform: none;
+  font-size: 1rem;
+  border-radius: 3px;
+  width: 60%;
+  margin: auto;
+  display: block;
+}
+footer article form button:hover {
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid #fff;
+  color: #313131;
+  transition: 0.4s ease;
+}
+footer article form button:hover {
+  background: transparent;
+  color: #313131;
+  border: 2px solid #fde21c;
+  transition: 0.4s ease;
+}
+footer article img {
+  width: 30%;
+}
+footer article ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+footer article ul li::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  font-size: 0.6rem;
+  color: #012f5b;
+  margin-right: 20px;
+}
+footer article h4 {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+footer article .adress {
+  margin-top: 20px;
+}
+footer article:last-child p {
+  margin-bottom: 10px;
+}
+footer article:last-child p:nth-child(2) {
+  font-size: 0.8rem;
+}
+footer article:last-child i {
+  color: #012f5b;
+  margin-right: 10px;
+}
+
+/***bottomBar***/
+.bottomBar {
+  padding: 50px 0;
+  background: #313131;
+  text-align: center;
+  color: #fff;
+  font-size: 1.3rem;
+}
 
 /*# sourceMappingURL=style.css.map */
