@@ -85,21 +85,38 @@ nav {
     center,
     row,
     wrap);
+    @media (max-width: 768px) {
+        padding: 10px 15px 10px 0;
+    }
     div:nth-child(1) {
         flex: 1;
         img {
             width: 80px;
+            @media (max-width: 768px) {
+                width: 60px;
+            }
         }
         @include flex(flex-start,
         center,
         row,
         wrap);
+        @media (max-width: 768px) {
+            @include flex(center,
+            center,
+            column,
+            wrap);
+        }
         a {
             color: $white;
             text-decoration: none;
             font-weight: 600;
             margin-left: 20px;
             font-size: 1.3rem;
+            @media (max-width: 768px) {
+                font-size: 1rem;
+                margin-left: 0;
+                font-weight: 500;
+            }
             &:hover {
                 color: $lightgray;
             }
@@ -115,6 +132,10 @@ nav {
             font-size: .8rem;
             font-weight: 600;
             text-align: center;
+            @media (max-width: 768px) {
+                font-weight: 400;
+                font-size: 0.7rem;
+            }
         }
     }
     div:nth-child(3) {
@@ -128,6 +149,10 @@ nav {
             2px solid $white,
             $white,
             none);
+            @media (max-width: 768px) {
+                font-size: .8rem;
+                padding: 10px 20px;
+            }
         }
     }
 }
@@ -142,13 +167,22 @@ nav {
     column,
     wrap);
     @include img(80vh);
+    @media (max-width: 768px) {
+        @include img(70vh);
+    }
     color: $white;
     h1 {
         font-size: 3rem;
+        @media (max-width: 768px) {
+            font-size: 2.5rem;
+        }
     }
     p {
         text-align: center;
         padding: 30px 0;
+        @media (max-width: 768px) {
+            padding: 15px;
+        }
     }
     div {
         @include flex(center,
@@ -161,6 +195,11 @@ nav {
             $white,
             none);
             margin-right: 10px;
+            @media (max-width: 768px) {
+                font-size: .8rem;
+                padding: 10px 20px;
+                margin-right: 5px;
+            }
             &:hover {
                 background: transparent;
                 color: $tertiary;
@@ -173,6 +212,11 @@ nav {
             $white,
             none);
             margin-left: 10px;
+            @media (max-width: 768px) {
+                font-size: .8rem;
+                padding: 10px 20px;
+                margin-left: 5px;
+            }
         }
     }
 }
@@ -186,6 +230,10 @@ nav {
     stretch,
     row,
     wrap);
+    @media (max-width: 768px) {
+        @include flex(center, stretch, column, wrap);
+        padding: 2rem;
+    }
     article {
         flex: 1;
         text-align: center;
@@ -205,11 +253,17 @@ nav {
         span:nth-child(2) {
             color: $darkblue;
             font-size: 2.4rem;
+            @media (max-width: 768px) {
+                font-size: 1.7rem;
+            }
         }
         span:nth-child(3) {
             color: $darkblue;
             font-size: 5rem;
             font-weight: 300;
+            @media (max-width: 768px) {
+                font-size: 3.5rem;
+            }
         }
         span:nth-child(4) {
             color: $text;
@@ -245,11 +299,17 @@ nav {
     background-image: linear-gradient(rgba($black, .5), rgba($black, .5)), url(../img/bg3.jpg);
     @include img(85vh);
     padding: $padding;
+    @media (max-width: 768px) {
+        @include img(auto);
+    }
     h2 {
         font-size: 5rem;
         font-weight: 600;
         text-align: center;
         color: $white;
+        @media (max-width: 768px) {
+            font-size: 2.5rem;
+        }
     }
     hr {
         background: $secondary;
@@ -263,8 +323,15 @@ nav {
         center,
         row,
         wrap);
+        @media (max-width: 768px) {
+            @include flex(center, center, row, wrap);
+        }
         article {
-            flex: 0 0 30%;
+            flex: 0 0 31%;
+            @media (max-width: 768px) {
+                flex: 0 0 85%;
+                margin-bottom: 30px;
+            }
             background: $white;
             border-radius: 10px;
             border: 1px solid $lightgray;
@@ -309,18 +376,28 @@ nav {
         font-weight: 300;
         text-align: center;
         margin-bottom: 40px;
+        @media (max-width: 768px) {
+            font-size: 3.2rem;
+        }
     }
     .container {
         @include flex(space-between,
         center,
         row,
         wrap);
+        @media (max-width: 768px) {
+            @include flex(space-between, center, column, wrap);
+            padding: 0 20px;
+        }
         article {
             flex: 0 0 48%;
             @include flex(space-between,
             stretch,
             row,
             wrap);
+            @media (max-width: 768px) {
+                @include flex(space-between, center, column, wrap);
+            }
             margin-bottom: 50px;
             box-shadow: 0 0 30px $lightgray;
             &:hover {
@@ -374,8 +451,15 @@ nav {
         center,
         row,
         wrap);
+        @media (max-width: 768px) {
+            @include flex(space-between, center, column, wrap);
+            padding: 20px;
+        }
         article {
             flex: 0 0 49%;
+            @media (max-width: 768px) {
+                flex: 0 0 90%;
+            }
         }
         article:first-child {
             border: 1px solid $lightgray;
@@ -385,6 +469,9 @@ nav {
                 margin-top: 30px;
                 font-size: 2.5rem;
                 font-weight: 400;
+                @media (max-width: 768px) {
+                    font-size: 2rem;
+                }
             }
             p {
                 padding: 30px;
@@ -407,6 +494,13 @@ nav {
             wrap);
             div {
                 padding: 50px;
+                @media (max-width: 768px) {
+                    padding: 30px 0;
+                    h3 {
+                        margin-bottom: 20px;
+                        font-weight: 500;
+                    }
+                }
             }
         }
     }
@@ -417,22 +511,39 @@ nav {
 
 .work {
     @include flex(space-between,
-    flex-start,
+    center,
     row,
     wrap);
     padding: $padding;
+    @media (max-width: 768px) {
+        @include flex(space-between, flex-start, column, wrap);
+        padding: 30px;
+    }
     article {
         flex: 0 0 32%;
         line-height: 1.6;
         font-size: .8;
         font-weight: 400;
+        @media (max-width: 768px) {
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
     }
     article:first-child {
         align-self: center;
+        @media (max-width: 768px) {
+            font-size: 1.5rem;
+            align-self: start;
+        }
         h2 {
             font-size: 2.5rem;
             font-weight: 500;
             line-height: 50px;
+            @media (max-width: 768px) {
+                font-size: 1.8rem;
+                padding: 0 15px;
+                margin-top: 30px;
+            }
         }
     }
 }
@@ -470,6 +581,9 @@ nav {
         2px solid $tertiary,
         $white,
         uppercase);
+        @media (max-width: 768px) {
+            margin-top: 10px;
+        }
         &:hover {
             background: transparent;
             color: $tertiary;
@@ -487,6 +601,10 @@ footer {
     flex-start,
     row,
     wrap);
+    @media (max-width: 768px) {
+        @include flex(center, center, column, wrap);
+        padding: 15px;
+    }
     article {
         flex: 1;
         line-height: 1.7;
@@ -496,6 +614,10 @@ footer {
             column,
             wrap);
             padding-right: 30px;
+            @media (max-width: 768px) {
+                @include flex(flex-start, stretch, column, wrap);
+                padding: 15px;
+            }
             input {
                 padding: 20px;
                 margin-bottom: 30px;
@@ -513,9 +635,12 @@ footer {
                 2px solid $secondary,
                 $primary,
                 none);
-                width: 60%;
+                width: 50%;
                 margin: auto;
                 display: block;
+                @media (max-width: 768px) {
+                    width: 70%;
+                }
                 &:hover {
                     background: transparent;
                     color: $primary;
