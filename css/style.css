@@ -320,6 +320,7 @@ nav div:nth-child(3) button:hover {
 .advantages {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg3.jpg);
   height: 85vh;
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   padding: 4rem 0;
