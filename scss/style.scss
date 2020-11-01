@@ -297,6 +297,7 @@ nav {
 
 .advantages {
     background-image: linear-gradient(rgba($black, .5), rgba($black, .5)), url(../img/bg3.jpg);
+    background-attachment: fixed;
     @include img(85vh);
     padding: $padding;
     @media (max-width: 768px) {
